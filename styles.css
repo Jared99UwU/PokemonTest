@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7e6a3; /* Color de fondo amarillo */
+}
+
+header {
+    background-color: #ffcb05;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+    color: #2a75bb;
+}
+
+main {
+    padding: 1em;
+}
+
+/* Contenedor de la galería centrado en vista de PC */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1em;
+    max-width: 1200px; /* Limita el ancho máximo de la galería */
+    margin: 0 auto; /* Centra la galería horizontalmente */
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #3b4cca; /* Borde azul más grueso */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 0.5em 0;
+    color: #666;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.type span {
+    background-color: #ef5350; /* Color de fondo del tipo */
+    color: white;
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between; /* Botones en extremos opuestos */
+    margin-top: 1em;
+}
+
+button {
+    background-color: #2a75bb;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 1em;
+    display: none;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
